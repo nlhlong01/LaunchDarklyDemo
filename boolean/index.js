@@ -1,11 +1,18 @@
+// create a user
 var user = {
-  "key": "user1"
+  key: 'johndoe',
+  name: 'John Doe',
+  email: 'foo@autodesk.com',
+  country: 'Germany'
 };
-var ldClient = LDClient.initialize('5dd7c98fe6145e083bd2e08d', user);
+
+// initialize a LaunchDarkly client
+var ldClient = LDClient.initialize('5de4e5a4c2a942083c638a3c', user); // SDK key of the dev env
 
 ldClient.on('ready', function() {
   console.log("It's now safe to request feature flags");
-  const showFeature = ldClient.variation("display-message", false);
+  // request a feature flag
+  const showFeature = ldClient.variation('boolean-feature', false);
   const divEl = document.getElementById('msg');
   const imgEl = document.getElementById('img');
 
