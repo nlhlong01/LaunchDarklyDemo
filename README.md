@@ -4,5 +4,7 @@ A small program to demonstrates the feature flags SaaS LaunchDarkly during my pr
 
 ## Instruction
 
+```
 npm install
 npm start
+```
