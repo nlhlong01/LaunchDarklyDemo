@@ -18,9 +18,9 @@ ldClient.on('ready', function() {
 
   if (showFeature) {
     divEl.innerHTML = 'Feature is on';
-    imgEl.src = './switch-on.jpg';
+    imgEl.src = './static/switch-on.jpg';
   } else {
     divEl.innerHTML = 'Feature is off';
-    imgEl.src = './switch-off.jpg';
+    imgEl.src = './static/switch-off.jpg';
   }
 });
